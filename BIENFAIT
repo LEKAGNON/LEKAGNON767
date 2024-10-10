@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEKAGNON - Votre plateforme de promotion</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: #ff4500;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        section {
+            margin-bottom: 40px;
+            border-bottom: 2px solid #eaeaea;
+            padding-bottom: 20px;
+        }
+
+        h2 {
+            color: #ff4500;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        form label {
+            margin-bottom: 5px;
+        }
+
+        form input, form textarea {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form input[type="submit"] {
+            background-color: #ff4500;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #eaeaea;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Bienvenue sur LEKAGNON</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#offres">Offres</a></li>
+                <li><a href="#temoignages">Témoignages</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>À propos de LEKAGNON</h2>
+            <p>LEKAGNON est la plateforme incontournable pour tous ceux qui souhaitent promouvoir leurs produits et services efficacement.</p>
+        </section>
+
+        <section id="offres">
+            <h2>Offres Irrésistibles</h2>
+            <p>Inscrivez-vous pour accéder à des offres spéciales et des programmes de promoteur !</p>
+            <ul>
+                <li>Inscription gratuite avec des essais disponibles.</li>
+                <li>Programme de promoteur : 500 FCFA d'inscription, 50 FCFA par jour, ou 2000 FCFA par mois.</li>
+                <li>Recevez les premiers liens d'offre de rémunération.</li>
+            </ul>
+        </section>
+
+        <section id="temoignages">
+            <h2>Témoignages</h2>
+            <p>"LEKAGNON m'a aidé à augmenter mes ventes !" - Client satisfait</p>
+            <p>"Une plateforme incontournable pour les promoteurs !" - Autre client</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contactez-nous</h2>
+            <form id="contact-form">
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" required></textarea>
+                <input type="submit" value="Envoyer">
+            </form>
+            <div id="form-response" style="margin-top: 20px;"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 LEKAGNON. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        // Gestion de l'envoi du formulaire
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // Simule l'envoi du formulaire
+            document.getElementById('form-response').innerText = `Merci ${name}, votre message a été envoyé !`;
+            document.getElementById('contact-form').reset();
+        });
+
+        // Animation des sections lors du défilement
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                    section.style.opacity = 1;
+                    section.style.transform = 'translateY(0)';
+                } else {
+                    section.style.opacity = 0;
+                    section.style.transform = 'translateY(50px)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
