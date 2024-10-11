@@ -1,0 +1,79 @@
+
+### 2. Fichier index.html
+
+Voici comment intégrer les fonctionnalités sur ta page d'accueil (index.html) :
+
+```html
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenue sur Lekagnon</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Assurez-vous d'avoir un fichier CSS pour le style -->
+</head>
+<body>
+    <header>
+        <h1>Bienvenue sur Lekagnon</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="features.html">Fonctionnalités</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="intro">
+            <h2>Transformez votre influence en revenus</h2>
+            <p>
+                Lekagnon est le réseau social innovant conçu pour autonomiser les créateurs africains. 
+                Ici, chaque action - partage, like, commentaire - génère des revenus. 
+                Notre mission est de transformer l'influence en opportunités financières, tout en bâtissant une communauté dynamique et engagée.
+            </p>
+        </section>
+
+        <section id="features">
+            <h2>Fonctionnalités Clés</h2>
+            <ul>
+                <li>Tableau de bord personnalisé</li>
+                <li>Système de récompenses</li>
+                <li>Chat en direct</li>
+                <li>Analyse des données d'interaction</li>
+                <li>Événements en direct</li>
+                <li>Offres d'emplois journalières</li>
+                <li>Recherche de fournisseurs</li>
+                <li>Articles gratuits</li>
+                <li>Formation en ligne</li>
+                <li>Pratique sans formation</li>
+                <li>Recherche d'associés business</li>
+                <li>Postulez en ligne</li>
+                <li>Marketplace</li>
+                <li>Cabine en ligne</li>
+                <li>Vidéaste pour contenu</li>
+                <li>Rencontres et événements</li>
+                <li>Histoire secrète du jour</li>
+                <li>Messages anonymes</li>
+                <li>Recherche de personnes</li>
+                <li>Actions d'ensemble</li>
+                <li>Défis du moment</li>
+                <li>Lancement de directs</li>
+                <li>Recevoir des informations sur des articles recherchés</li>
+                <li>Acheter des articles depuis le Togo</li>
+                <li>Organisation d'événements</li>
+                <li>Accéder à des bonus du jour</li>
+                <li>Travailler avec un vidéaste</li>
+                <li>Secrets et histoires du jour</li>
+                <li>Collecte de feedback et suggestions d'amélioration</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Lekagnon. Tous droits réservés.</p>
+        <p>Contactez-nous : <a href="mailto:contact@lekagnon.com">contact@lekagnon.com</a></p>
+    </footer>
+</body>
+</html>
